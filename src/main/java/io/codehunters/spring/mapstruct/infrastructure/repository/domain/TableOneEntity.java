@@ -23,6 +23,6 @@ public class TableOneEntity extends Entities<Long> {
     private String attributeTwo;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "table_two", referencedColumnName = "id")
+    @JoinColumn(name = "table_two", referencedColumnName = "id", insertable = false, updatable = false)
     private TableTwoEntity tableTwo;
 }

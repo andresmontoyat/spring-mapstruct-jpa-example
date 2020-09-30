@@ -28,6 +28,7 @@ public class TableOneRestControllerImpl implements TableOneRestController {
     private TableOneModelMapper mapper;
 
     @PostMapping
+    @Override
     public ResponseEntity<TableOneCreateResponse> save(@Validated @RequestBody TableOneCreateRequest tableOneCreateRequest, BindingResult result) {
         TableOne tableOne = tableOneService.save(mapper.toTableOne(tableOneCreateRequest));
         return ResponseEntity.created(createURI("/{id}", tableOne.getId())).body(mapper.toTableOneCreateResponse(tableOne));

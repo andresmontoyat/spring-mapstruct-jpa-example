@@ -2,13 +2,14 @@ package io.codehunters.spring.mapstruct.infrastructure.adapter.mapper.support;
 
 import io.codehunters.spring.mapstruct.domain.model.support.DTO;
 import io.codehunters.spring.mapstruct.infrastructure.repository.domain.support.Entities;
-import org.mapstruct.MapperConfig;
+import org.mapstruct.Mapper;
 import org.mapstruct.ObjectFactory;
 import org.mapstruct.TargetType;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+@Mapper(componentModel = "spring")
 public class JpaMapper {
 
     @PersistenceContext

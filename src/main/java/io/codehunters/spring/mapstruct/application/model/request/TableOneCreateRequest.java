@@ -10,4 +10,6 @@ public class TableOneCreateRequest {
     private String attributeOne;
 
     private String attributeTwo;
+
+    private Long tableTwoId;
 }

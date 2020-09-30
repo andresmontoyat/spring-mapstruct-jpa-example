@@ -11,5 +11,7 @@ import org.mapstruct.ReportingPolicy;
 public interface TableOneAdapterMapper {
 
     TableOneEntity toTableOneEntity(TableOne tableOne);
+
+    TableOne toTableOne(TableOneEntity tableOneEntity);
 }
 
